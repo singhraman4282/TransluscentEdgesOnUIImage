@@ -13,33 +13,16 @@ class ViewController: UIViewController {
     
     
     let originalMonaLisa = #imageLiteral(resourceName: "monalisa")
-    let originalMonaLisa2 = #imageLiteral(resourceName: "monalisa")
-    //    var cutoutFromMona:CGFloat = 0.0
-    
     
     @IBOutlet var imageView: UIImageView!
-    
-    
-    
-    let rightImgEdges = RightImageEdges()
-    let leftImgEdges = LeftImageEdges()
-    let topImgEdges = TopImageEdge()
-    let bottimImgEdges = BottomImageEdge()
     
     let gradientManager = GradientManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let secondImage = rightImgEdges.stitchWithRightBlur(usingImage: leftImgEdges.stitchWithLeftBlur(usingImage: originalMonaLisa)!)
-//        
-//        let topImage = topImgEdges.stitchWithTopBlur(usingBlurredImage: secondImage)
-//        
-//        let bottomImage = bottimImgEdges.stitchWithBottomBlur(usingBlurredImage: topImage)
-
         imageView.image = gradientManager.blurEdgesOfImage(originalMonaLisa)
-//        imageView.image = topImage
-        
+
     }
     
 }
